@@ -4,11 +4,14 @@ create table produtos(
 id int auto_increment,
 categoria varchar(45) not null, 
 descricao varchar(200) not null,
-preco float,
+preco float not null,
 precofinal float not null,
 imagem varchar (200) not null,
 primary key (id)
 );
+
+alter table produtos 
+modify column precofinal float not null;
 
 insert into produtos (categoria, descricao, preco, precofinal, imagem)
 value ('Geladeira', 'Geladeira Brastemp Frost Free Side 500 litros', 4350.00, 3100.00, '_imagens/_geladeira/refrigerador-brastemp-side-.webp'); 
